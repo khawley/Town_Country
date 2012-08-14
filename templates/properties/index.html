@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Town & Country {% endblock %}
+
+{% block main %}
+<table class="prop_table">
+	<thead>
+		<th>Properties for Rent</th>
+	</thead>
+	<tbody>
+	{% for prop in properties_list %}
+		<tr><td>{{prop.str_addr}}, {{prop.city}}<br>
+			${{prop.price}} {%if prop.type == 'rental' %}a month{% endif %}  {{prop.beds}} bed{%if prop.beds > 1%}s{%endif%} & {{prop.baths}} bath{%if prop.baths > 1%}s{% endif%}<br>
+			{{propr.description}}
+		</td></tr>
+	{% endfor %}
+	</tbody>
+</table>
+{% endblock %}

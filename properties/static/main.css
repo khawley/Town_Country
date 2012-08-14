@@ -1,0 +1,19 @@
+body{
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    background-color:#b4dbff;
+    
+}
+
+.container {
+    background-color:#ffffff;
+}
+
+.prop_table{
+    border:0px solid black;
+    border-collapse:collapse;
+}
+
+.prop_table tbody tr{
+	border:1px solid black;
+}

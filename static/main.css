@@ -1,0 +1,15 @@
+body{
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    background-color:#b4dbff;
+    
+}
+
+.container {
+    background-color:#ffffff;
+}
+
+.prop_table{
+    border:100px dotted black;
+    border-collapse:collapse;
+}

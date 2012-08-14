@@ -1,0 +1,20 @@
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+<html>
+<head>
+        <title>{% block title %}{% endblock %} on InsertTeamHere</title>
+        <link rel="stylesheet" type="text/css" href="{{STATIC_PREFIX}}main.css"/>
+</head>
+
+<body>
+	<div class="container">
+		<div class="header_block"><h1>{% block header %}{% endblock %}</h1></div>
+		<div class="main">
+		{% block main %}{% endblock %}
+		</div>
+		<div class="footer_block">
+		<h4>Created by Kelsey Hawley at <a href="http://www.karinscoils.com">karinscoils.com</a></h4>
+		</div>
+	</div>
+</body>
+</html>
