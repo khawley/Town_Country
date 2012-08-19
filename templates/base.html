@@ -2,18 +2,28 @@
 {% get_static_prefix as STATIC_PREFIX %}
 <html>
 <head>
-        <title>{% block title %}{% endblock %} on InsertTeamHere</title>
+        <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{{STATIC_PREFIX}}main.css"/>
+        <link rel="shortcut icon" href="{{STATIC_PREFIX}}favicon.ico">
 </head>
 
 <body>
 	<div class="container">
-		<div class="header_block"><h1>{% block header %}{% endblock %}</h1></div>
+		<div class="header_block"><h1>{% block header %}<img src="{{STATIC_PREFIX}}logo.png">{% endblock %}</h1></div>
+		<div class="nav_menu">
+			<table><tr>
+				<td><a href="/">Home</a></td>
+				<td><a href="/properties">Properties</a></td>
+				<td><a href="/about">About</a></td>
+				<td><a href="/contact">Contact</a></td>
+				<td></td>
+			</tr></table>
+		</div>
 		<div class="main">
 		{% block main %}{% endblock %}
 		</div>
 		<div class="footer_block">
-		<h4>Created by Kelsey Hawley at <a href="http://www.karinscoils.com">karinscoils.com</a></h4>
+			<h4>Created by Kelsey Hawley at <a href="http://www.karinscoils.com">karinscoils.com</a></h4>
 		</div>
 	</div>
 </body>

@@ -1,5 +1,5 @@
 # Create your views here.
-from properties.models import Homes, Photos
+from properties.models import Home, Photo
 from django.shortcuts import render_to_response
 from django import forms
 
@@ -14,8 +14,8 @@ from django import forms
 
 
 def index(request):
-    properties_list= Homes.objects.all()
-    photo_list = Photos.objects.all()
+    properties_list= Home.objects.all()
+    photo_list = Photo.objects.all()
     return render_to_response('properties/index.html',{'properties_list' : properties_list, 'photo_list': photo_list,})
 """"    if request.method=='GET':
         form = SearchBar(request.GET)

@@ -4,7 +4,7 @@ from django.core.files.base import ContentFile
 
 # Create your models here.
 
-class Homes (models.Model):
+class Home (models.Model):
     str_addr = models.CharField(max_length=50)
     city_choices=(('Oakdale', 'Oakdale'), ('Riverbank', 'Riverbank'), ('Modesto', 'Modesto'), ('Escalon', 'Escalon'),)
     city = models.CharField(max_length=20, choices=city_choices)
@@ -20,10 +20,10 @@ class Homes (models.Model):
     def __unicode__(self):
         return self.str_addr
     
-class Photos(models.Model):
-    home = models.ForeignKey(Homes)
+class Photo (models.Model):
+    home = models.ForeignKey(Home)
     name = models.CharField(max_length = 50)
-    link = models.ImageField(upload_to='photos/homes/')#+Homes.city+'/'+Homes.str_addr)
+    img = models.ImageField(upload_to='photos/homes/')#+Homes.city+'/'+Homes.str_addr)
     
     def __unicode__(self):
         return self.name

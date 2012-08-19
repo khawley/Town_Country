@@ -1,9 +1,9 @@
-from properties.models import Homes
-from properties.models import Photos
+from properties.models import Home
+from properties.models import Photo
 from django.contrib import admin
 
-class PhotosInline(admin.StackedInline):
-    model = Photos
+class PhotoInline(admin.StackedInline):
+    model = Photo
     extra = 3
 
 class HomeAdmin(admin.ModelAdmin):
@@ -11,6 +11,6 @@ class HomeAdmin(admin.ModelAdmin):
         (None,               {'fields': (('type', 'house_type')),}),
         ('House Details', {'fields': (('str_addr', 'city'),('beds', 'baths', 'price'), ('description'),),}),
     ]
-    inlines = [PhotosInline]
+    inlines = [PhotoInline]
     
-admin.site.register(Homes, HomeAdmin)
+admin.site.register(Home, HomeAdmin)

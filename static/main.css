@@ -2,14 +2,75 @@ body{
     font-family: Arial, sans-serif;
     font-size: 12px;
     background-color:#b4dbff;
-    
+    text-align: left;
+    color: #3f3f3f;
 }
-
 .container {
-    background-color:#ffffff;
+	width: 900px; 
+	overflow: hidden;
+	border-radius:15px;
 }
-
+.main{
+    background-color:#ffffff;
+	width: 850px; 
+	overflow: hidden;
+	border-radius:15px;
+    padding: 15px 25px;
+}
+.header_block{
+	background-image:url(images/header_banner.jpg);
+	border:0px;
+	padding:0px;
+	width:900px;
+	height:50px;
+	overflow: hidden;
+	background-color:#2e367d;
+	border-radius:15px;
+	color: white;
+}
+.header_block h1{
+	color: white;
+	font-family:Helvetica;
+	font-size: 24px;
+	margin: .5em 30px;
+}
+.footer_block{
+	/*background-image:url(images/footer_banner.jpg);*/
+	float:left;
+	border:0px;
+	padding:0px;
+	width:900px;
+	height:50px;
+	background-color: #2e367d;
+	border-radius:15px;
+}
+.footer_block h4{
+	margin: 1.5em 30px;
+	width:70%;
+	font-family:Helvetica;
+	color: white;
+}
 .prop_table{
-    border:100px dotted black;
-    border-collapse:collapse;
+	border-spacing: 0px 5px;
+}
+/* Images of the property (left-side) */
+th{
+	border:2px solid black;
+	border-right:0px;
+	padding: 7px 10px;
+	border-radius:10px 0px 0px 10px;
+}
+/*.inner_col td{
+	border:2px solid black;
+	border-right:0px;
+	border-left:0px;
+	padding: 7px 10px;
+
+}*/
+/* Property information (right-side) */
+td{
+	border:2px solid black;
+	border-left:0px;
+	padding: 7px 10px;
+	border-radius:0 10px 10px 0px;
 }

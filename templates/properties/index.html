@@ -1,18 +1,23 @@
 {% extends "base.html" %}
-{% block title %} Town & Country {% endblock %}
+{% block title %}T&C - Properties{% endblock %}
+
+
 
 {% block main %}
-<table class="prop_table">
-	<thead>
-		<th>Properties for Rent</th>
-	</thead>
-	<tbody>
+<h2>Current Available Properties</h2>
+<table class="prop_table" id="prop_table">
 	{% for prop in properties_list %}
-		<tr><td>{{prop.str_addr}}, {{prop.city}}<br>
-			${{prop.price}} {%if prop.type == 'rental' %}a month{% endif %}  {{prop.beds}} bed{%if prop.beds > 1%}s{%endif%} & {{prop.baths}} bath{%if prop.baths > 1%}s{% endif%}<br>
-			{{propr.description}}
-		</td></tr>
+	
+	<tr><th>
+		{% for photo in photo_list %} 
+			{% if prop.id == photo.home.id %}
+				<img style="" src="{{photo.img.url}}" height="100">
+			{% endif%}
+		{% endfor %}</th>
+		<td>{{prop.str_addr}}, {{prop.city}}<br>
+		${{prop.price}} {%if prop.type == 'rental' %}a month{% endif %}  {{prop.beds}} bed{%if prop.beds > 1%}s{%endif%} & {{prop.baths}} bath{%if prop.baths > 1%}s{% endif%}<br>
+		{{prop.description}}
+	</td></tr>
 	{% endfor %}
-	</tbody>
 </table>
 {% endblock %}

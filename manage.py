@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 import os
+os.environ.setdefault('LANG','en_US')
+
 import sys
 
 if __name__ == "__main__":
