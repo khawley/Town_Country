@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+{% block title %}T&C - Staff{% endblock %}
+
+{% block main %}
+	<h2>About Us & Our Staff</h2>
+	<p>Meet our family, serving you in the same location and same family since 1963!</p>
+	<table>
+		<tr>
+			<td><img src="{{STATIC_PREFIX}}images/Susan.jpg"> <br>
+				Susan Schutz<br>
+				Broker</td></tr>
+		<tr>
+			<td><img src="{{STATIC_PREFIX}}images/Kelsey.jpg"><br>
+				Kelsey Hawley<br>
+				Web Mistress</td></tr>
+	</table>
+{% endblock %}
