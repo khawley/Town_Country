@@ -1,11 +1,12 @@
 body{
-	
+/* 	background-color:#009b8e; */
     background-color:#1160a9;
 }
 body, table, p{
     font-family: Arial, sans-serif;
     font-size: 12px;
     text-align: left;
+
     color: #3f3f3f;
 }
 .container {
@@ -23,21 +24,25 @@ body, table, p{
     padding: 15px 25px;
 }
 .header_block{
-	background-image:url(images/header_banner.jpg);
+/* 	background-image:url(images/header_banner.jpg); */
 	border:0px;
 	padding:0px;
 	width:900px;
 	height:100px;
 	overflow: hidden;
-	background-color:#9ad5ff;
+/* 	background-color:#9ad5ff; */
+	background-color: white;
 	border-radius:15px 15px 0px 0px;
 	color: white;
+	padding: .5em 30px;
+	text-align: center;
 }
 .header_block h1{
 	color: white;
 	font-family:Helvetica;
 	font-size: 24px;
 	margin: .5em 30px;
+	text-align:center;
 	color: #1160a9;
 }
 .footer_block{
@@ -48,7 +53,7 @@ body, table, p{
 	width:900px;
 	height:50px;
 	background-color: #9ad5ff;
-	border-radius:15px;
+	border-radius:0px 0px 15px 15px;
 }
 .footer_block h4{
 	margin: 1.5em 30px;
@@ -58,7 +63,7 @@ body, table, p{
 }
 .nav_menu{
 	background-color:#9ad5ff;
-	border-radius:0px 0px 15px 15px;
+	border-radius:0px;/* 0px 15px 15px;*/
 	padding:5px 0px;
 }
 .nav_menu td a{

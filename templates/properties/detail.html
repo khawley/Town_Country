@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}T&C - Properties{% endblock %}
+
+
+
+{% block main %}
+<h2>Current Available Properties</h2>
+<table class="prop_table" id="prop_table">
+	<tr><th>
+		{% if p.main_photo %}
+			<img style="" src="{{p.main_photo.url}}" height="100">
+		{% endif%}
+		</th>
+		<td>{{p.str_addr}}, {{p.city}}<br>
+		${{p.price}} {%if p.type == 'rental' %}a month{% endif %}  {{p.beds}} bed{%if p.beds > 1%}s{%endif%} & {{p.baths}} bath{%if p.baths > 1%}s{% endif%}<br>
+		{{p.description}}
+	</td></tr>
+</table>
+{% endblock %}

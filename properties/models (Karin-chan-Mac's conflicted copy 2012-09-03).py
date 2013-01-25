@@ -18,10 +18,10 @@ class Home (models.Model):
 	type_choices = (('rental', 'rental'), ('for sale', 'for sale'),)
 	type = models.CharField(max_length=10, choices=type_choices)
 	main_photo = models.ImageField(upload_to='photos/main-homes/')
-	#date = models.DateTimeField('Date Created')
+	date = models.DateTimeField('Date Created')
 	
 	def contains_photo(self):
-		return self.main_photo
+		return self.main_photo != NULL
 		
 	contains_photo.boolean = True
 	contains_photo.short_description = 'Contains exterior photo?'

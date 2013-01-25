@@ -9,7 +9,7 @@ class PhotoInline(admin.TabularInline):
 	extra = 3
 	formfield_overrides = {
         models.CharField: {'label': 'Image Label/description'},
-        #models.ImageField: {'widget': AdminImageWidget()},
+        models.ImageField: {'widget': AdminImageWidget()},
     }
 	"""fieldsets = [
 		('Extra Photos' {'fields': ['name', 'img', 'img_thumb']})
@@ -23,6 +23,6 @@ class HomeAdmin(admin.ModelAdmin):
 	]
 	inlines = [PhotoInline]
 	
-	list_display=('str_addr', 'type', 'house_type')
+	list_display=('str_addr', 'type', 'house_type', 'date', 'contains_photo')
 	
 admin.site.register(Home, HomeAdmin)

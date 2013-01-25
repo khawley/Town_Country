@@ -1,6 +1,6 @@
 # Create your views here.
 from properties.models import Home, Photo
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render_to_response
 from django import forms
 
 #city_choices=Homes.objects.filter(city__isnull=False).distinct().values('city')
@@ -37,6 +37,3 @@ def index(request):
         form = SearchBar()
         return render_to_response('properties/index.html',{'properties_list' : properties_list, 'photo_list': photo_list, 'form':form,})"""
     
-def detail(request, property_id):
-	p = get_object_or_404(Home, pk=property_id)
-	return render_to_response('properties/detail.html', {'p': p})

@@ -9,12 +9,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-import dj_database_url
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
-
-
-
-"""DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': '/Users/kelseyhawley/Documents/Mine/Dropbox/Websites/Town_Country/town_country.db',                      # Or path to database file if using sqlite3.
@@ -23,7 +18,7 @@ DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
-}"""
+}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -126,8 +121,9 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-     'polls',
+     #'polls',
      'properties',
+     'snippets',
 )
 
 # A sample logging configuration. The only tangible logging

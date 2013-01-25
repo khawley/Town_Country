@@ -8,12 +8,13 @@
 <table class="prop_table" id="prop_table">
 	{% for prop in properties_list %}
 	
-	<a href="/properties/{{p.id}}"><tr><th>
-		{% if prop.main_photo %}
-			<img style="" src="{{prop.main_photo.url}}" height="100">
-		{% endif%}
-		</th>
-		<td><a href="/properties/{{prop.id}}">{{prop.str_addr}}, {{prop.city}}</a><br>
+	<tr><th>
+		{% for photo in photo_list %} 
+			{% if prop.id == photo.home.id %}
+				<img style="" src="{{photo.img.url}}" height="100">
+			{% endif%}
+		{% endfor %}</th>
+		<td>{{prop.str_addr}}, {{prop.city}}<br>
 		${{prop.price}} {%if prop.type == 'rental' %}a month{% endif %}  {{prop.beds}} bed{%if prop.beds > 1%}s{%endif%} & {{prop.baths}} bath{%if prop.baths > 1%}s{% endif%}<br>
 		{{prop.description}}
 	</td></tr>
